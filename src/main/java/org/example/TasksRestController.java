@@ -8,6 +8,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 import java.util.Map;
 
+
 @RestController
 @RequestMapping("api/tasks")
 public class TasksRestController {
@@ -24,15 +25,16 @@ public class TasksRestController {
     }
 
     @PostMapping
-    public ResponseEntity<Task> handleCreateNewTask(@RequestBody NewTaskPayload payload,
-                                                    UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<?> handleCreateNewTask(@RequestBody NewTaskPayload payload, UriComponentsBuilder uriComponentsBuilder) {
+        if (payload.details() == null || payload.details().isBlank()) {
+            return ResponseEntity.badRequest().contentType(MediaType.APPLICATION_JSON)
+                    .body(new ErrorsPresentation(List.of("task.create.details.errors.not_set")));
+        }
+
         Task task = new Task(payload.details());
         this.taskRepository.save(task);
-        return ResponseEntity.created(uriComponentsBuilder
-                        .path("/api/tasks/{taskId}")
-                        .build(Map.of("taskId", task.id())))
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(task);
-    }
 
+        return ResponseEntity.created(uriComponentsBuilder.path("/api/tasks/{taskId}").build(Map.of("taskId", task.id())))
+                .contentType(MediaType.APPLICATION_JSON).body(task);
+    }
 }
