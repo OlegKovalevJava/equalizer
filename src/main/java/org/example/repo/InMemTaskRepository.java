@@ -1,5 +1,6 @@
-package org.example;
+package org.example.repo;
 
+import org.example.Task;
 import org.springframework.stereotype.Repository;
 
 import java.util.LinkedList;

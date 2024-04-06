@@ -1,4 +1,6 @@
-package org.example;
+package org.example.repo;
+
+import org.example.Task;
 
 import java.util.List;
 
