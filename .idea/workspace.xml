@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a49e455-f596-4ec6-a77f-7aef29c48ca7" name="Changes" comment="02/04/2024">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_ru_RU.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ErrorsPresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/errors/ErrorsPresentation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InMemTaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/InMemTaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TasksRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TasksRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message.properties" beforeDir="false" />
-    </list>
+    <list default="true" id="2a49e455-f596-4ec6-a77f-7aef29c48ca7" name="Changes" comment="06/04/2024" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,12 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1712256772963</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="06/04/2024">
+      <option name="closed" value="true" />
+      <created>1712425518358</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712425518359</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="01/04/2024" />
     <MESSAGE value="02/04/2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="02/04/2024" />
+    <MESSAGE value="06/04/2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="06/04/2024" />
   </component>
 </project>
