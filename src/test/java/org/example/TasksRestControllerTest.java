@@ -44,7 +44,5 @@ class TasksRestControllerTest {
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals(MediaType.APPLICATION_JSON, responseEntity.getHeaders().getContentType());
         assertEquals(tasks, responseEntity.getBody());
-
     }
-
 }
