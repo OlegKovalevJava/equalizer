@@ -10,12 +10,14 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.doReturn;
 
 @ExtendWith(MockitoExtension.class)
@@ -44,5 +46,26 @@ class TasksRestControllerTest {
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals(MediaType.APPLICATION_JSON, responseEntity.getHeaders().getContentType());
         assertEquals(tasks, responseEntity.getBody());
+    }
+
+    @Test
+    void handleCreateNewTask_PayloadValid_ReturnsValidResponseEntity() {
+        var details = "TaskOne";
+
+        var responseEntity = this.controller.handleCreateNewTask(new NewTaskPayload(details),
+                UriComponentsBuilder.fromUriString("http://lochalhost:8080"), Locale.ENGLISH);
+
+        assertNotNull(responseEntity);
+        assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
+        assertEquals(MediaType.APPLICATION_JSON, responseEntity.getHeaders().getContentType());
+
+        if (responseEntity.getBody() instanceof Task task) {
+            assertNotNull(task.id());
+            assertEquals(details, task.details());
+            assertFalse(task.completed());
+
+            assertEquals(URI.create("http://localhost:8080/api/tasks/" + task.id()), responseEntity.getHeaders().getLocation());
+
+        }
     }
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a49e455-f596-4ec6-a77f-7aef29c48ca7" name="Changes" comment="Этап2 Тесты">
+    <list default="true" id="2a49e455-f596-4ec6-a77f-7aef29c48ca7" name="Changes" comment="Этап2.1 Тесты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TasksRestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TasksRestControllerTest.java" afterDir="false" />
     </list>
@@ -224,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712863861373</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Этап2.1 Тесты">
+      <option name="closed" value="true" />
+      <created>1712914084073</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712914084073</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -234,7 +242,8 @@
     <MESSAGE value="09/04/2024" />
     <MESSAGE value="Этап1 ГОТОВ" />
     <MESSAGE value="Этап2 Тесты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Этап2 Тесты" />
+    <MESSAGE value="Этап2.1 Тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Этап2.1 Тесты" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/equalizer$TasksRestControllerTest.ic" NAME="TasksRestControllerTest Coverage Results" MODIFIED="1712861688966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
