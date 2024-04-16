@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a49e455-f596-4ec6-a77f-7aef29c48ca7" name="Changes" comment="Этап2.1 Тесты">
+    <list default="true" id="2a49e455-f596-4ec6-a77f-7aef29c48ca7" name="Changes" comment="Этап2.2 Тесты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TasksRestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TasksRestControllerTest.java" afterDir="false" />
     </list>
@@ -58,6 +58,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.ShowcaseApplication.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TasksRestControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.TasksRestControllerTest.handleCreateNewTask_PayloadValid_ReturnsValidResponseEntity.executor&quot;: &quot;Debug&quot;,
     &quot;JUnit.TasksRestControllerTest.handleGetAllTasks_ReturnsValidResponseEntity.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -90,7 +91,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TasksRestControllerTest.handleGetAllTasks_ReturnsValidResponseEntity">
+  <component name="RunManager" selected="JUnit.TasksRestControllerTest.handleCreateNewTask_PayloadValid_ReturnsValidResponseEntity">
     <configuration name="ShowcaseApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.ShowcaseApplication" />
       <module name="equalizer" />
@@ -119,6 +120,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TasksRestControllerTest.handleCreateNewTask_PayloadValid_ReturnsValidResponseEntity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="equalizer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TasksRestControllerTest" />
+      <option name="METHOD_NAME" value="handleCreateNewTask_PayloadValid_ReturnsValidResponseEntity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TasksRestControllerTest.handleGetAllTasks_ReturnsValidResponseEntity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="equalizer" />
       <extension name="coverage">
@@ -137,8 +154,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TasksRestControllerTest.handleGetAllTasks_ReturnsValidResponseEntity" />
+        <item itemvalue="JUnit.TasksRestControllerTest.handleCreateNewTask_PayloadValid_ReturnsValidResponseEntity" />
         <item itemvalue="JUnit.TasksRestControllerTest" />
+        <item itemvalue="JUnit.TasksRestControllerTest.handleGetAllTasks_ReturnsValidResponseEntity" />
         <item itemvalue="Application.ShowcaseApplication" />
       </list>
     </recent_temporary>
@@ -232,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712914084073</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Этап2.2 Тесты">
+      <option name="closed" value="true" />
+      <created>1713173638226</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713173638226</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,7 +269,19 @@
     <MESSAGE value="Этап1 ГОТОВ" />
     <MESSAGE value="Этап2 Тесты" />
     <MESSAGE value="Этап2.1 Тесты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Этап2.1 Тесты" />
+    <MESSAGE value="Этап2.2 Тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Этап2.2 Тесты" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/TasksRestControllerTest.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/equalizer$TasksRestControllerTest.ic" NAME="TasksRestControllerTest Coverage Results" MODIFIED="1712861688966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
