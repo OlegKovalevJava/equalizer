@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.errors.ErrorsPresentation;
 import org.example.repo.TaskRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -73,5 +74,25 @@ class TasksRestControllerTest {
         }
 
         verifyNoMoreInteractions(this.taskRepository);
+    }
+
+    @Test
+    void handleCreateNewTask_PayloadInvalid_ReturnsValidResponseEntity() {
+        var details = "   ";
+        var locale = Locale.US;
+        var errorMessage = "Details is empty";
+
+        doReturn(errorMessage).when(this.messageSource)
+                .getMessage("task.create.details.errors.not_set", new Object[0], locale);
+
+        var responseEntity = this.controller.handleCreateNewTask(new NewTaskPayload(details),
+                UriComponentsBuilder.fromUriString("http://lochalhost:8080"), locale);
+
+        assertNotNull(responseEntity);
+        assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
+        assertEquals(MediaType.APPLICATION_JSON, responseEntity.getHeaders().getContentType());
+        assertEquals(new ErrorsPresentation(List.of(errorMessage)), responseEntity.getBody());
+
+        verifyNoInteractions(taskRepository);
     }
 }

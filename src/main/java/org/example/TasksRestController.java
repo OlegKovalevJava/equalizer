@@ -32,11 +32,6 @@ public class TasksRestController {
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(this.taskRepository.findAll());
     }
 
-    @GetMapping("{id}")
-    public ResponseEntity<Task> handleFindTask(@PathVariable("id") UUID id) {
-        return ResponseEntity.of(this.taskRepository.findById(id));
-    }
-
     @PostMapping
     public ResponseEntity<?> handleCreateNewTask(@RequestBody NewTaskPayload payload, UriComponentsBuilder uriComponentsBuilder,
                                                  Locale locale) {
@@ -52,6 +47,11 @@ public class TasksRestController {
 
         return ResponseEntity.created(uriComponentsBuilder.path("/api/tasks/{taskId}").build(Map.of("taskId", task.id())))
                 .contentType(MediaType.APPLICATION_JSON).body(task);
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Task> handleFindTask(@PathVariable("id") UUID id) {
+        return ResponseEntity.of(this.taskRepository.findById(id));
     }
 
 }
