@@ -12,4 +12,5 @@ public interface TaskRepository {
     void save(Task task);
 
     Optional<Task> findById(UUID id);
+
 }
